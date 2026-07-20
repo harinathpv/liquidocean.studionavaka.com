@@ -13,6 +13,32 @@ export default function Home() {
     return () => tabs.forEach((t) => t.removeEventListener("click", handler));
   }, []);
 
+  useEffect(() => {
+    const journeyLink = document.querySelector(".nav-links > li > a[href='#journeys']");
+    if (journeyLink) {
+      const parent = journeyLink.parentElement;
+      journeyLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        parent.classList.toggle("open");
+      });
+      
+      // Close submenu when clicking a submenu link
+      const submenuLinks = parent.querySelectorAll(".submenu a");
+      submenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          parent.classList.remove("open");
+        });
+      });
+
+      // Close submenu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!parent.contains(e.target)) {
+          parent.classList.remove("open");
+        }
+      });
+    }
+  }, []);
+
   return (
     <>
       <nav>
@@ -22,7 +48,12 @@ export default function Home() {
           </a>
           <ul className="nav-links" id="nl">
             <li><a href="#model">The Model</a></li>
-            <li><a href="#journeys">Journeys</a></li>
+            <li>
+              <a href="#journeys">Journeys</a>
+              <ul className="submenu">
+                <li><a href="/for-leaders">For Leaders</a></li>
+              </ul>
+            </li>
             <li><a href="#frameworks">Frameworks</a></li>
             <li><a href="#hub">Learning</a></li>
             <li><a href="#assessment">Assessment</a></li>
@@ -98,9 +129,9 @@ export default function Home() {
           <div className="journeys">
             <div className="journey j-lead rv">
               <span className="jnum">Layer 01 · Leaders</span>
-              <h4>I’m developing leaders</h4>
+              <h4>I'm developing leaders</h4>
               <p>Build leaders who reinvent before they have to.</p>
-              <a className="go" href="#">Explore the habits →</a>
+              <a className="go" href="/for-leaders">Explore the habits →</a>
             </div>
             <div className="journey j-prod rv">
               <span className="jnum">Layer 02 · Products</span>
