@@ -8,7 +8,7 @@ export default function ForLeaders() {
       <nav>
         <div className="wrap nav-inner">
           <a href="https://liquidocean.studionavaka.com/" className="brand">
-            <img src="/images/navaka-logo.png" alt="Studio NAVAKA" className="brand-logo" />
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SN%20Swami%20Logo%20TRN-6TTKR46ugNCrpKHkRbQDNq0wu6vfNV.png" alt="Studio NAVAKA" className="brand-logo" />
           </a>
           <ul className="nav-links" id="nl">
             <li><a href="https://liquidocean.studionavaka.com/#model">The Model</a></li>

@@ -44,7 +44,7 @@ export default function Home() {
       <nav>
         <div className="wrap nav-inner">
           <a href="#" className="brand">
-            <img src="/images/navaka-logo.png" alt="Studio NAVAKA" className="brand-logo" />
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SN%20Swami%20Logo%20TRN-6TTKR46ugNCrpKHkRbQDNq0wu6vfNV.png" alt="Studio NAVAKA" className="brand-logo" />
           </a>
           <ul className="nav-links" id="nl">
             <li><a href="#model">The Model</a></li>
