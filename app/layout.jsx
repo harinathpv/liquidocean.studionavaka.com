@@ -1,22 +1,22 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Liquid Ocean® — The Strategy of Continuous Reinvention",
+  title: "The Liquid Ocean Compass — The Living Companion",
   description:
-    "Liquid Ocean® is a way of thinking about building lasting businesses — the strategy of continuous reinvention. By Studio NAVAKA.",
+    "The living companion to The Liquid Ocean Compass by Harinath Pudipeddi. The methodology, the frameworks, and the assessments that keep evolving between editions.",
   metadataBase: new URL("https://liquidocean.studionavaka.com"),
   openGraph: {
-    title: "Liquid Ocean® — The Strategy of Continuous Reinvention",
+    title: "The Liquid Ocean Compass — The Living Companion",
     description:
-      "A way of thinking about building lasting businesses. Every competitive advantage eventually expires. Reinvention is a capability.",
+      "Build lasting products. Build lasting businesses. Build lasting leaders. The living companion to the book.",
     url: "https://liquidocean.studionavaka.com",
-    siteName: "Liquid Ocean® by Studio NAVAKA",
+    siteName: "The Liquid Ocean Compass",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Liquid Ocean® — The Strategy of Continuous Reinvention",
-    description: "A way of thinking about building lasting businesses. By Studio NAVAKA.",
+    title: "The Liquid Ocean Compass — The Living Companion",
+    description: "Build lasting products, businesses, and leaders. The living companion to the book.",
   },
 };
 
