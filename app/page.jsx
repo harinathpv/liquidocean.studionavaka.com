@@ -13,6 +13,32 @@ export default function Home() {
     return () => tabs.forEach((t) => t.removeEventListener("click", handler));
   }, []);
 
+  useEffect(() => {
+    const journeyLink = document.querySelector(".nav-links > li > a[href='#journeys']");
+    if (journeyLink) {
+      const parent = journeyLink.parentElement;
+      journeyLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        parent.classList.toggle("open");
+      });
+      
+      // Close submenu when clicking a submenu link
+      const submenuLinks = parent.querySelectorAll(".submenu a");
+      submenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          parent.classList.remove("open");
+        });
+      });
+
+      // Close submenu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!parent.contains(e.target)) {
+          parent.classList.remove("open");
+        }
+      });
+    }
+  }, []);
+
   return (
     <>
       <nav>
